@@ -1,0 +1,22 @@
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\bin\Debug\FifteenWithTime.exe.config
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\bin\Debug\FifteenWithTime.exe
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\bin\Debug\FifteenWithTime.pdb
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.csproj.AssemblyReference.cache
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.csproj.SuggestedBindingRedirects.cache
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.Properties.Resources.resources
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.csproj.GenerateResource.cache
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.csproj.CoreCompileInputs.cache
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.exe
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.pdb
+C:\Users\wissa\OneDrive\Desktop\visual S c\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.Form1.resources
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\bin\Debug\FifteenWithTime.exe.config
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\bin\Debug\FifteenWithTime.exe
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\bin\Debug\FifteenWithTime.pdb
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.csproj.AssemblyReference.cache
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.csproj.SuggestedBindingRedirects.cache
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.Form1.resources
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.Properties.Resources.resources
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.csproj.GenerateResource.cache
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.csproj.CoreCompileInputs.cache
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.exe
+C:\Users\wissa\OneDrive\Desktop\FifteenWithTime\FifteenWithTime\obj\Debug\FifteenWithTime.pdb
