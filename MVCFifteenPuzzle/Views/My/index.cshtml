@@ -1,0 +1,200 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+
+    <style type=text/css>
+        .buttonInTable {
+            background: #FFFFFF;
+            font-family: Arial;
+            font-size: XX-Large;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm("Index", "my"))
+        {
+            <div>
+                <table>
+                    @for (int i = 0; i < 4; i++)
+                    {
+                        <tr>
+                            @for (int j = 0; j < 4; j++)
+                            {
+                                @if (i == 3 && j == 3)
+                                {
+                                    break;
+                                }
+
+                                <td>
+                                    <input type="button" tabindex="@(4 * i + j)" id="@(4 * i + j)" onclick="myClick(@(4 * i + j))" class='buttonInTable' style="left : @(60 * j + "px") ; top: @(60 * i + "px"); position:absolute" />
+                                </td>
+                            }
+                        </tr>
+                    }
+                </table>
+            </div>
+        }
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    var intervalID;
+    var counter = 0;
+    var currButton = null;
+    var indRowEmpty, indColEmpty;
+    var indRowPushed, indColPushed;
+    var button_Clicked, blocked;
+    var indexEmpty;
+    var myJson_Obj;
+    var EmptyPosTop;
+    var EmptyPosLeft;
+    var idxEmpt;
+
+    window.onload = shuffle;
+    async function shuffle() {
+        indRowEmpty = 3;
+        indColEmpty = 3;
+        indexEmpty = 15;
+        EmptyPosTop = 180 + "px";
+        EmptyPosLeft = 180 + "px";
+        var url = '@Url.Action("Init", "my")';
+        var response = await fetch(url, {
+            method: 'GET'
+        });
+
+        if (response.ok) {
+
+            var myJSON_Text = await response.text();
+
+            myJson_Obj = JSON.parse(myJSON_Text);
+            for (let i = 0; i < 15; i++) {
+                var tempButton = document.getElementById(i);
+
+                tempButton.value = myJson_Obj[i].num;
+                tempButton.style.backgroundColor = myJson_Obj[i].color_;
+
+
+            }
+            blocked = false;
+            document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+
+        } else {
+            window.alert("no work");
+        }
+    }
+
+
+    async function myClick(indexButt) {
+
+        button_Clicked = document.getElementById(indexButt);
+        indexPushed = button_Clicked.tabIndex;
+        indRowPushed = Math.floor(button_Clicked.tabIndex / 4);
+        indColPushed = button_Clicked.tabIndex % 4;
+
+        indRowEmpty = Math.floor(parseInt(indexEmpty) / 4);
+        indColEmpty = parseInt(indexEmpty) % 4;
+
+        myJson_Obj = new Object();
+        myJson_Obj.RowEmpty = indRowEmpty;
+        myJson_Obj.ColEmpty = indColEmpty;
+        myJson_Obj.Row = indRowPushed;
+        myJson_Obj.Col = indColPushed;
+
+        myJson_Obj.ClickColor = button_Clicked.style.backgroundColor;
+        myJson_Obj.backCol = document.body.style.backgroundColor;
+        var MyJsonStr = JSON.stringify(myJson_Obj);
+
+
+        var url = '@Url.Action("AsyncNextStep", "my")';
+        var response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: MyJsonStr
+        });
+        if (response.ok) {
+
+            var myjSON_Text = await response.text();
+
+            var MyJsonObjTemp = JSON.parse(myjSON_Text);
+
+            if (MyJsonObjTemp.toMove == null) {
+                return;
+            } else {
+                var Temp_EmptyPosTop = button_Clicked.style.top;
+                var Temp_EmptyPosLeft = button_Clicked.style.left;
+                button_Clicked.style.top = EmptyPosTop;
+                button_Clicked.style.left = EmptyPosLeft;
+                EmptyPosTop = Temp_EmptyPosTop;
+                EmptyPosLeft = Temp_EmptyPosLeft;
+                document.body.style.backgroundColor = MyJsonObjTemp.coloravg;
+
+            }
+
+            var tmpIdx = idxEmpt;
+            idxEmpt = button_Clicked.tabIndex;
+            button_Clicked.tabIndex = tmpIdx;
+
+            button_Clicked.tabIndex = indRowEmpty * 4 + indColEmpty;
+            indexEmpty = indexPushed;
+            IsEnd();
+        }
+    }
+
+    async function IsEnd() {
+        buut0 = document.elementFromPoint(0, 0);
+        buut1 = document.elementFromPoint(60, 0);
+
+        myJson_Obj = new Array(2);
+        myJson_Obj[0] = buut0.value;
+        myJson_Obj[1] = buut1.value;
+
+
+
+        var myJsonString = JSON.stringify(myJson_Obj);
+        var url = '@Url.Action("AsyncIsEnd", "my")';
+        var response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: myJsonString
+        });
+        if (response.ok) {
+            var myJSON_Text = await response.text();
+            myJSON_Text = myJSON_Text.replace(/["']/g, "");
+            if (myJSON_Text == "TRUE") {
+
+                var con = confirm("Play again ?");
+                if (con == true) {
+                    location.reload();
+
+                }
+                else
+                    window.close();
+            }
+
+        }
+        else {
+            alert("Error: " + response.status);
+        }
+    }
+
+</script>
