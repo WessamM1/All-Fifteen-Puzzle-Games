@@ -13,9 +13,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     indexEmpty: number;
-	
     state: string = '';
-
     constructor() {
         setTimeout(() => {
             this.shuffle();
@@ -29,8 +27,7 @@ export class AppComponent {
         return myArray;
     }
 
-    divideFunction(num: number) 
-	{
+    divideFunction(num: number) {
         return Math.floor(num / 4);
     }
 
@@ -122,7 +119,7 @@ export class AppComponent {
             buttonmove.style.top = newY + "px";
             buttonmove.style['animation-name'] = "none";
             buttonmove.style['animation-play-state'] = "none";
-			buttonmove.tabIndex = this.indexEmpty;
+	    buttonmove.tabIndex = this.indexEmpty;
             this.indexEmpty = currTabIndex;
             this.check();
         }, 400);
