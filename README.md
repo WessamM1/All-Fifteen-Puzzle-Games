@@ -6,9 +6,9 @@ This is a simple implementation of the classic fifteen puzzle game built in 14 d
 2) FifteenWithTime : C# with Animation.
 3) ASP Web Form : C# with ASP Web Form
 4) Fifteen Client Server : Asynch Client Server with Handler
-5) 
-6) 
-7) 
+5) ASP Core Razor Page :  ASP Core Razor Page and Save Game by session
+6) ASPClientServer : Asynch Client(ASP Core Razor Page js) Server(Core Web API) 
+7) MVCFifteenPuzzle : Model View Controller Model
 8) 
 9) 
 10) 
