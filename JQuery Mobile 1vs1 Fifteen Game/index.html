@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+        
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        
+	<meta name="format-detection" content="telephone=no">
+
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+
+    <style type="text/css">
+        .divAbsolutePosition_1{
+            position: absolute;
+            left: 20px;
+            top: 70px;
+            background: #FF0000;
+            width: 300px;
+            height: 300px;
+        }
+        .divAbsolutePosition_2 {
+            position: absolute;
+            left: 20px;
+            top: 390px;
+            background: #00FF00;
+            width: 300px;
+            height: 300px;
+        }
+        .buttonAbsolutePosition {
+            position: absolute;
+            font-family: Arial;
+            font-size:xx-large;
+            left: 0px;
+            top: 0px;
+            background: #FF0000;
+            width: 70px;
+            height: 70px;
+        }
+        .myLabel {
+            display: block;
+            float:left;
+            margin-left:5px;
+            font-family: Arial;
+            font-size: 4em;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+    
+<body>
+    
+    <div id="Page1" data-role="page">
+        <div data-role="content">
+            <label id="result_0" class="myLabel" style="background:#ff0000"> 0 </label>
+            <label id="result_1" class="myLabel" style="background:#00ff00"> 0 </label>
+        </div>
+
+        <div id="myComp0" data-role=myComponent class="divAbsolutePosition_1">
+
+        </div>
+
+        <div id="myComp1" data-role=myComponent class="divAbsolutePosition_2">
+
+        </div>
+
+    </div>  
+  
+        
+	<script src="js/jquery-3.5.1.js"></script>
+
+        <script src="js/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>

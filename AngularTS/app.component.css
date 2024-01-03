@@ -1,0 +1,43 @@
+.buttonAbsolutePosition {
+        background: #FF0000;
+        font-family: Arial;
+        font-size: XX-Large;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+
+    /* Internet Explorer 10 ... */
+    animation-name:none;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: paused; 
+    animation-fill-mode: forwards;
+
+    -webkit-animation-name:none;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-play-state: paused; 
+    -webkit-animation-fill-mode: forwards;
+
+}
+
+@keyframes Rightt {
+    0%   {transform: translateX(0px);}
+    100%  {transform: translateX(60px);}
+}
+@keyframes Leftt {
+    0%   {transform: translateX(0px);}
+    100%  {transform: translateX(-60px);}
+}
+@keyframes Upp {
+    0%   {transform: translateY(0px);}
+    100%  {transform: translateY(-60px);}
+}
+@keyframes Downn {
+    0%   {transform: translateY(0px);}
+    100%  {transform: translateY(60px);}
+}
