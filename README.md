@@ -9,6 +9,13 @@ This is a simple implementation of the classic fifteen puzzle game built in 14 d
 5) ASP Core Razor Page :  ASP Core Razor Page and Save Game by session
 6) ASPClientServer : Asynch Client(ASP Core Razor Page js) Server(Core Web API) 
 7) MVCFifteenPuzzle : Model View Controller Model
-8) 
-9) 
-10) 
+
+8-14 Projects Can run on Browser and Android (Cordova Run ..)
+
+8) JQuery Mobile Simple Animation
+9) JQuery Mobile 1vs1 Fifteen Game
+10) JQuery Mobile - NodeJS
+11) AngularTS
+12) AngularTS - Web Socket, NodeTS
+13) AngularTS - Golang
+14) React Native
